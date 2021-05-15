@@ -7,11 +7,17 @@ import './App.css';
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [inputValue, setInputValue] = useState('');
+  const [selectValue, setSelectValue] = useState('Filter by Region')
 
   return (
     <div className={darkMode ? 'App dark-mode' : 'App ligth-mode' }>
       <Header darkMode={darkMode} setDarkMode={setDarkMode}/>
-      < Form inputValue={inputValue} setInputValue={setInputValue} darkMode={darkMode}/>
+      < Form 
+        selectValue={selectValue} 
+        setSelectValue={setSelectValue} 
+        inputValue={inputValue} 
+        setInputValue={setInputValue} 
+        darkMode={darkMode}/>
      <h1>hello world</h1>
     </div>
   );

@@ -1,7 +1,10 @@
 import React from 'react';
 import '../styles/Form.css'
-const Form = ({ setInputValue, inputValue, darkMode}) => {
+const Form = ({ setInputValue, inputValue, darkMode, selectValue, setSelectValue}) => {
 
+    const handleSelect = (e) => {
+        setSelectValue(e.target.value)
+    }
     const handleInputValue = (e) => {
         setInputValue(e.target.value)
     }
@@ -19,8 +22,11 @@ const Form = ({ setInputValue, inputValue, darkMode}) => {
                  onChange={(e) => {handleInputValue(e)}} />
             </div>
             <div className='select-wrapper'>
-            <select className={darkMode ? 'dark-mode dark-elements' : 'ligth-mode ligth-elements'} name='regions' id='region-select'>
-                <option value='' selected> Filter by Region</option>
+            <select
+                onChange={(e) => {handleSelect(e)}}
+                value={selectValue}
+                className={darkMode ? 'dark-mode dark-elements' : 'ligth-mode ligth-elements'} name='regions' id='region-select'>
+                <option value='Filter by Region'> Filter by Region</option>
                 <option value='all'>All</option>
                 <option value='africa'>Africa</option>
                 <option value='america'>America</option>
