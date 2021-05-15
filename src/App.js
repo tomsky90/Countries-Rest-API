@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React, { useState }from 'react';
+import { BrowserRoute as Router, Switch, Route} from 'react-router-dom';
+import Header from './components/Header';
+import Form from './components/Form';
 import './App.css';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
+  const [inputValue, setInputValue] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={darkMode ? 'App dark-mode' : 'App ligth-mode' }>
+      <Header darkMode={darkMode} setDarkMode={setDarkMode}/>
+      < Form inputValue={inputValue} setInputValue={setInputValue} darkMode={darkMode}/>
+     <h1>hello world</h1>
     </div>
   );
 }

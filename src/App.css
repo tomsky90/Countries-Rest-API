@@ -1,38 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Dark-Mode-Elements: hsl(209, 23%, 22%);
+  --Dark-Mode-Background: hsl(207, 26%, 17%);
+  --Light-Mode-Text:  hsl(200, 15%, 8%);
+  --Light-Mode-Input: hsl(0, 0%, 52%);
+  --Light-Mode-Background: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+}
+
 .App {
-  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dark-mode {
+  color: var(--White);
+  background-color: var(--Dark-Mode-Background);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dark-elements {
+  background-color: var(--Dark-Mode-Elements);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ligth-mode {
+  color: var(--Light-Mode-Text);
+  background-color: var(--Light-Mode-Background);
 }
 
-.App-link {
-  color: #61dafb;
+.ligth-mode-input {
+  color: var(--Light-Mode-Input);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ligth-mode ::placeholder {
+  color: var(--Light-Mode-Input);
 }
+
+.dark-mode ::placeholder { 
+  color: var(--White);
+  opacity: 1; 
+}
+.ligth-elements {
+  background-color: var(--White);
+}
+
+
+
