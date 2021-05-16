@@ -1,0 +1,35 @@
+article {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+}
+
+article h2 {
+    margin-bottom: 20px;
+}
+
+article p  {
+    font-weight: 600;
+    margin-bottom: 8px;
+} 
+
+article p span {
+    font-weight: 200;
+}
+
+article .text-wrapper {
+    padding-left: 20px;
+}
+
+.flag-img-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.flag-img-container img {
+    width: 100%;
+}

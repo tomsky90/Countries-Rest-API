@@ -11,11 +11,14 @@ const Form = ({ setInputValue, inputValue, darkMode, selectValue, setSelectValue
     return ( 
         <form className={darkMode ? 'dark-mode' : 'ligth-mode'}>
             <div className='input-wrapper'> 
-                <button className={darkMode ? 'dark-mode dark-elements' : 'ligth-mode ligth-mode-input'} type='submit'>
-                <i className="fas fa-search"></i>
+                <button 
+                className={darkMode ? 'dark-mode dark-elements' : 'ligth-mode ligth-mode-input'} 
+                type='submit'>
+                    <i className="fas fa-search"></i>
                 </button>
                 <input
-                className={darkMode ? 'dark-mode dark-elements' : 'ligth-mode ligth-elements'}
+                 aria-label='search'
+                 className={darkMode ? 'dark-mode dark-elements' : 'ligth-mode ligth-elements'}
                  placeholder= ' Search for a country...' 
                  type='text' 
                  value={inputValue} 
@@ -26,13 +29,13 @@ const Form = ({ setInputValue, inputValue, darkMode, selectValue, setSelectValue
                 onChange={(e) => {handleSelect(e)}}
                 value={selectValue}
                 className={darkMode ? 'dark-mode dark-elements' : 'ligth-mode ligth-elements'} name='regions' id='region-select'>
-                <option value='Filter by Region'> Filter by Region</option>
-                <option value='all'>All</option>
-                <option value='africa'>Africa</option>
-                <option value='america'>America</option>
-                <option value='asia'>Asia</option>
-                <option value='europe'>Europe</option>
-                <option value='oceania'>Oceania</option>
+                <option aria-label='option' value='Filter by Region'> Filter by Region</option>
+                <option aria-label='option' value='all'>All</option>
+                <option aria-label='option' value='africa'>Africa</option>
+                <option aria-label='option' value='america'>America</option>
+                <option aria-label='option' value='asia'>Asia</option>
+                <option aria-label='option' value='europe'>Europe</option>
+                <option aria-label='option' value='oceania'>Oceania</option>
             </select>
             </div>
         </form>

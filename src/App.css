@@ -23,6 +23,7 @@
 }
 
 .dark-elements {
+  color: var(--White);
   background-color: var(--Dark-Mode-Elements);
 }
 
@@ -44,6 +45,7 @@
   opacity: 1; 
 }
 .ligth-elements {
+  color: var(--Light-Mode-Text);
   background-color: var(--White);
 }
 
