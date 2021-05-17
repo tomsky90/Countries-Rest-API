@@ -19,8 +19,9 @@ const CountriesList = ({ inputValue, selectValue, darkMode }) => {
         })
         .then(response => response.json())
         .then(data => {
-            setCountriesListData(data)
             
+            setCountriesListData(data)
+
         })
         .catch((error => {
             console.log('sorry could not find data')

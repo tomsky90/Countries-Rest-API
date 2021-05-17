@@ -3,3 +3,10 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+@media only screen and (min-width: 700px) {
+    .countries-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

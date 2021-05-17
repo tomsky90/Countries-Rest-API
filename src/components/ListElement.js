@@ -17,7 +17,7 @@ const ListElement = ({ countriesListData, darkMode }) => {
         </div>
     </article>)
     return ( 
-    <div>
+    <div className='countries-wrapper'>
         {countryElement}
         
     </div> );
