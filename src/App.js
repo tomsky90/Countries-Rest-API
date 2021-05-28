@@ -71,6 +71,7 @@ function App() {
           <CountryDetailsPage  
             darkMode={darkMode}
             countriesListData={countriesListData}
+            setSelectValue={setSelectValue}
           
           />
         </Route>

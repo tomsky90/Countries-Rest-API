@@ -37,6 +37,7 @@ const HomePage = ({
                 countriesDataForDisplay={countriesDataForDisplay}
                 setCountriesDataForDisplay={setCountriesDataForDisplay}
                 selectValue={selectValue}
+                setSelectValue={setSelectValue}
             />
 }
             
