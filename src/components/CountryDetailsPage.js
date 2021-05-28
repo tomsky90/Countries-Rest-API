@@ -52,7 +52,7 @@ const CountryDetailsPage = ({ match, darkMode, countriesListData,setSelectValue 
                 <p className='add-space'>Top Level Domain: <span>{countryDetails.topLevelDomain}</span></p>
                 <p>Currencies: {countryDetails.currencies.map(currency => <span key={Math.random() * 999000}>{`${currency.name}`}</span>)} </p>
                 <p>Languages: {countryDetails.languages.map(language => <span key={Math.random() * 999000}>{`${language.name}   , `}</span>)}          </p> 
-
+        
                 <div className='borders-btn-container'>
                  <  h4>Border Countries:</h4>
 
