@@ -1,12 +1,31 @@
 .countries-list {
     width: 100%;
+    min-height: 100vh;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.countries-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 @media only screen and (min-width: 700px) {
     .countries-wrapper {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .countries-wrapper {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
