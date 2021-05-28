@@ -11,7 +11,9 @@ function App() {
   const [inputValue, setInputValue] = useState('');
   const [selectValue, setSelectValue] = useState('Filter by Region')
   const [countriesListData, setCountriesListData] = useState([]);
-  const [countriesDataForDisplay, setCountriesDataForDisplay] = useState([]);
+  const [countriesDataForDisplay, setCountriesDataForDisplay] = useState([{
+    alpha3Code: '',
+  }]);
 
     useEffect(() => {
         getCountriesData()
@@ -47,7 +49,7 @@ function App() {
       
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
     <div className={darkMode ? 'App dark-mode' : 'App ligth-mode' }>
       <Header darkMode={darkMode} setDarkMode={setDarkMode}/>
       <Switch>
@@ -67,7 +69,7 @@ function App() {
         </Route>
     
         <Route path='/countriesList/:alpha3Code' exact > 
-
+      {console.log()}
           <CountryDetailsPage  
             darkMode={darkMode}
             countriesListData={countriesListData}
