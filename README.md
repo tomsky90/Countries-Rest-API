@@ -20,8 +20,6 @@ How to work with Api and how to display data recived from it
 Lern how to build custom select Element
 Lern React Context
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
 ### Useful resources
 
 -Stack Overflow
