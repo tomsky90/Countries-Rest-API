@@ -13,7 +13,7 @@ const HomePage = ({
     selectValue, 
     setSelectValue,
     inputValue,
-    setInputValue
+    setInputValue,
 }) => {
     return ( 
         <div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import ListElement from './ListElement';
 import '../styles/CountriesList.css';
-const CountriesList = ({ countriesListData, countriesDataForDisplay, setCountriesDataForDisplay, darkMode, selectValue }) => {
+const CountriesList = ({ countriesListData, countriesDataForDisplay, setCountriesDataForDisplay, darkMode, selectValue, }) => {
     
 
     return ( 
@@ -11,7 +11,7 @@ const CountriesList = ({ countriesListData, countriesDataForDisplay, setCountrie
                 countriesListData={countriesListData}
                 countriesDataForDisplay={countriesDataForDisplay}
                 setCountriesDataForDisplay={setCountriesDataForDisplay}
-                selectValue={selectValue}
+                
             />
             
         </div>

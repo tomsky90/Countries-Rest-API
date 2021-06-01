@@ -1,5 +1,5 @@
 import React, { useState, useEffect }from 'react';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { HashRouter as Router, Switch, Route} from 'react-router-dom';
 import Header from './components/Header';
 import CountryDetailsPage from'./components/CountryDetailsPage';
 import HomePage from './components/HomePage';
@@ -11,9 +11,8 @@ function App() {
   const [inputValue, setInputValue] = useState('');
   const [selectValue, setSelectValue] = useState('Filter by Region')
   const [countriesListData, setCountriesListData] = useState([]);
-  const [countriesDataForDisplay, setCountriesDataForDisplay] = useState([{
-    alpha3Code: '',
-  }]);
+  const [countriesDataForDisplay, setCountriesDataForDisplay] = useState([]);
+  
 
     useEffect(() => {
         getCountriesData()
@@ -68,8 +67,8 @@ function App() {
         />
         </Route>
     
-        <Route path='/countriesList/:alpha3Code' exact > 
-      {console.log()}
+        <Route path='/:alpha3Code' exact > 
+      
           <CountryDetailsPage  
             darkMode={darkMode}
             countriesListData={countriesListData}

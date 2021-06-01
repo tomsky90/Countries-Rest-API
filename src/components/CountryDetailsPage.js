@@ -6,10 +6,16 @@ import '../styles/CountryDetailsPage.css'
 const CountryDetailsPage = ({ match, darkMode, countriesListData,setSelectValue }) => {
 
     const [countryDetails, setCountryDetails] = useState({
+        name: '',
+        flag: '',
         currencies: [],
+        nativeName: '',
         languages: [],
         borders: [],
-        population: ''
+        population: '',
+        alpha3Code: '',
+        region: '',
+        capital: '',
     });
 
 
@@ -70,7 +76,7 @@ const CountryDetailsPage = ({ match, darkMode, countriesListData,setSelectValue 
 
                         return(
 
-                                <Link to={`/countriesList/${id}`}  id={id}
+                                <Link to={`/${id}`}  id={id}
                                     className={darkMode ? 'border-country dark-elements' : 'border-country ligth-elements' }
                                     key={Math.random() * 999000}>
                                     {name}
