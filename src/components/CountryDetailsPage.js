@@ -29,7 +29,7 @@ const CountryDetailsPage = ({ match, darkMode, countriesListData,setSelectValue 
    
     
     const getCountryDetails = async () => {
-        await fetch(`https://restcountries.eu/rest/v2/alpha/${match.params.alpha3Code}`)
+        await fetch(`https://restcountries.com/v2/alpha/${match.params.alpha3Code}`)
         .then(response => response.json())
         .then(data => {
             setCountryDetails(data)
@@ -58,36 +58,39 @@ const CountryDetailsPage = ({ match, darkMode, countriesListData,setSelectValue 
                 <p className='add-space'>Top Level Domain: <span>{countryDetails.topLevelDomain}</span></p>
                 <p>Currencies: {countryDetails.currencies.map(currency => <span key={Math.random() * 999000}>{`${currency.name}`}</span>)} </p>
                 <p>Languages: {countryDetails.languages.map(language => <span key={Math.random() * 999000}>{`${language.name}   , `}</span>)}          </p> 
-        
-                <div className='borders-btn-container'>
-                 <  h4>Border Countries:</h4>
 
-                    {                                                                                                         
-    
-                        countryDetails.borders.map(border => {
-               
-                            const displayedCountry = countriesListData.filter((country) => country.alpha3Code === border)
+                {countryDetails.borders === undefined ? null: 
+                 <div className='borders-btn-container'>
+                    <h4>Border Countries:</h4>
 
-                            const name = displayedCountry.map(country => country.name)
-                            const id = displayedCountry.map(country => country.alpha3Code)
+                 {                                                                                                         
+ 
+                     countryDetails.borders.map(border => {
             
+                         const displayedCountry = countriesListData.filter((country) => country.alpha3Code === border)
+
+                         const name = displayedCountry.map(country => country.name)
+                         const id = displayedCountry.map(country => country.alpha3Code)
+         
+     
+          
+
+                     return(
+
+                             <Link to={`/${id}`}  id={id}
+                                 className={darkMode ? 'border-country dark-elements' : 'border-country ligth-elements' }
+                                 key={Math.random() * 999000}>
+                                 {name}
+                             </Link>
+                         )
+
+                     }
+                 )}
+ 
+   
+                 </div>}
         
-             
-
-                        return(
-
-                                <Link to={`/${id}`}  id={id}
-                                    className={darkMode ? 'border-country dark-elements' : 'border-country ligth-elements' }
-                                    key={Math.random() * 999000}>
-                                    {name}
-                                </Link>
-                            )
-
-                        }
-                    )}
-    
-      
-                </div>
+                   
                 </div>
                 
  

@@ -30,7 +30,7 @@ const Form = ({ setInputValue, setError, inputValue, darkMode, selectValue, setS
             setCountriesDataForDisplay(countriesListData.filter(country => country.name.toLowerCase().includes(searchCountry)))
 
             setSelectValue('Filter by Region')
-            console.log(countriesDataForDisplay)
+            
             if(countriesDataForDisplay.length <= 0 ){
                 setError(true)
             } else if(countriesDataForDisplay.length >= 0 ){

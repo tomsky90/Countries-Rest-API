@@ -22,7 +22,7 @@ function App() {
     
     const getCountriesData = async () => {
      
-        await fetch('https://restcountries.eu/rest/v2/all')
+        await fetch('https://restcountries.com/v2/all')
         .then(response => {
           if(response.ok){
             return response
